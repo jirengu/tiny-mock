@@ -1,0 +1,21 @@
+
+hello <%= username %>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js
+"></script>
+<script>
+	$.ajax({
+		url:"/user/100",
+		data: {id:100},
+	}).done(function(ret){
+		console.log(ret);
+	}).fail(function(){
+		console.log('fail')
+	})
+	
+	$.post('/postData',{msg:'hello'})
+	.done(function(ret){
+		console.log(ret);
+	}).fail(function(){
+		console.log('fail')
+	})
+</script>
